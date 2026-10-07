@@ -1,6 +1,11 @@
 import Image from "next/image";
 import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
-import { FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaWhatsapp,
+  FaYoutube,
+} from "react-icons/fa";
 
 const whatsappUrl =
   "https://api.whatsapp.com/send/?phone=917780819304&text=Hi+India+Travel+Safari%2C+I+would+like+the+price+and+full+quote+for+Goa+%E2%80%94+Tropical+Paradise.&type=phone_number&app_absent=0";
@@ -21,6 +26,18 @@ const footerLinks = [
   {
     label: "FAQ",
     href: "#faq",
+  },
+  {
+    label: "Privacy Policy",
+    href: "https://indiatravelsafari.com/privacy-policy",
+  },
+  {
+    label: "Terms & Conditions",
+    href: "https://indiatravelsafari.com/terms-and-conditions",
+  },
+  {
+    label: "Cancellation/Refund Policy",
+    href: "https://indiatravelsafari.com/cancellation-refund-policy",
   },
 ];
 
@@ -124,12 +141,12 @@ export default function Footer() {
 
               {/* Email */}
               <a
-                href="mailto:info@indiatravelsafari.com"
+                href="mailto:Indiatravelsafari@outlook.com"
                 className="flex items-start gap-3 text-sm text-white/65 transition-colors hover:text-white"
               >
                 <Mail size={17} className="mt-0.5 shrink-0" />
 
-                <span className="break-all">info@indiatravelsafari.com</span>
+                <span className="break-all">Indiatravelsafari@outlook.com</span>
               </a>
 
               {/* Location */}
