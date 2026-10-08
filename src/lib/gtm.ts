@@ -1,0 +1,4 @@
+export const GOOGLE_ADS_CONVERSION_ID = "AW-18195110072";
+
+export const GOOGLE_ADS_WHATSAPP_LABEL =
+  "htrnCL78ppMdELixjeRD";

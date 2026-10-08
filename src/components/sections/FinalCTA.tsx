@@ -1,62 +1,102 @@
-import { ArrowUpRight, MessageCircle, Sparkles } from "lucide-react";
+import {
+  MessageCircle,
+  Phone,
+} from "lucide-react";
 
 const whatsappUrl =
   "https://api.whatsapp.com/send/?phone=917780819304&text=Hi+India+Travel+Safari%2C+I+would+like+the+price+and+full+quote+for+Goa+%E2%80%94+Tropical+Paradise.&type=phone_number&app_absent=0";
 
 export default function FinalCTA() {
   return (
-    <section className="bg-[#F5F3ED] px-4 pb-16 pt-4 sm:px-6 sm:pb-20 lg:px-8 lg:pb-28">
-      <div className="mx-auto w-full max-w-7xl">
-        <div className="relative overflow-hidden rounded-[2.5rem] bg-[#304936] px-6 py-16 text-center text-white sm:px-10 sm:py-20 lg:px-16 lg:py-28">
-          {/* Decorative background */}
-          <div className="absolute -left-32 -top-32 h-80 w-80 rounded-full bg-[#DFE5D8]/10 blur-3xl" />
-          <div className="absolute -bottom-40 -right-20 h-96 w-96 rounded-full bg-[#C8A96B]/10 blur-3xl" />
+    <section className="bg-[#F7F4EC] px-4 pb-16 pt-4 sm:px-6 sm:pb-20 lg:px-8 lg:pb-28">
+      <div className="mx-auto max-w-7xl">
+        {/* Main CTA */}
+        <div className="relative overflow-hidden rounded-[2.5rem] bg-[#20231D] px-5 py-14 text-white sm:px-10 sm:py-20 lg:px-16 lg:py-24">
+          {/* Background Image */}
+          <img
+            src="/images/hero-goa.webp"
+            alt="Goa sunset"
+            className="absolute inset-0 h-full w-full object-cover opacity-20"
+          />
 
-          <div className="relative mx-auto max-w-3xl">
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-white/10 text-[#E7D4A5]">
-              <Sparkles size={24} strokeWidth={1.7} />
-            </div>
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-[#20231D]/20" />
 
-            <p className="mt-7 text-xs font-semibold uppercase tracking-[0.25em] text-white/50">
+          {/* Champagne Ambient Glow */}
+          <div className="absolute -right-32 -top-32 h-80 w-80 rounded-full bg-[#C9A66B]/15 blur-3xl" />
+
+          {/* Content */}
+          <div className="relative mx-auto max-w-3xl text-center">
+            {/* LOGO */}
+            <div className="mx-auto flex h-16 w-16 items-center justify-center sm:h-[72px] sm:w-[72px]">
+  <img
+    src="/images/logo.png"
+    alt="India Travel Safari"
+    className="h-full w-full object-contain"
+  />
+</div>
+
+            {/* Eyebrow */}
+            <p className="mt-7 text-xs font-bold uppercase tracking-[0.22em] text-[#E8D6B2] sm:text-sm sm:tracking-[0.25em]">
               Your Goa Story Awaits
             </p>
 
-            <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl lg:text-6xl">
+            {/* Heading */}
+            <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.045em] sm:text-5xl lg:text-6xl">
               Ready for your
-              <span className="block italic text-[#E7D4A5]">
+              <span className="block italic text-[#E8D6B2]">
                 Goa escape?
               </span>
             </h2>
 
-            <p className="mx-auto mt-6 max-w-xl text-sm leading-7 text-white/65 sm:text-base">
-              Tell us your travel dates and requirements. Our team will help
-              you with the complete quote and any customized arrangements you
-              need.
+            {/* Description */}
+            <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-white/70 sm:mt-6 sm:text-base">
+              Send us your travel dates and requirements. We will help you
+              with the complete quote and customized arrangements.
             </p>
 
-            <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            {/* CTA BUTTONS */}
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:mt-9 sm:flex-row">
+              {/* WhatsApp — GREEN ONLY BECAUSE IT IS EXPLICITLY WHATSAPP */}
               <a
                 href={whatsappUrl}
+                data-track="goa-whatsapp"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-[#304936] transition-all hover:bg-[#E7D4A5] sm:w-auto"
+                className="flex min-h-[51px] w-full items-center justify-center gap-2 rounded-[18px] border-2 border-[#128C7E] bg-[#25D366] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-white shadow-[0_5px_12px_rgba(37,211,102,0.18)] transition-all duration-200 hover:bg-[#128C7E] min-[390px]:text-[12px] min-[390px]:tracking-[0.15em] sm:w-auto sm:px-6"
               >
-                <MessageCircle size={18} />
-                Get Your Full Quote
-                <ArrowUpRight size={16} />
+                <MessageCircle
+                  size={18}
+                  strokeWidth={1.8}
+                  className="shrink-0"
+                />
+
+                <span>Chat on WhatsApp</span>
               </a>
 
+              {/* Call — SUBTLE CHAMPAGNE */}
               <a
                 href="tel:+917780819304"
-                className="inline-flex w-full items-center justify-center rounded-full border border-white/15 bg-white/5 px-7 py-4 text-sm font-semibold text-white transition-all hover:bg-white/10 sm:w-auto"
+                className="flex min-h-[51px] w-full items-center justify-center gap-2 rounded-[18px] border-2 border-[#C9A66B] bg-[#F8F1E4] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-[#6F5935] shadow-[0_4px_12px_rgba(201,166,107,0.08)] transition-all duration-200 hover:bg-[#EADFC9] min-[390px]:text-[12px] min-[390px]:tracking-[0.15em] sm:w-auto sm:px-6"
               >
-                Call +91 77808 19304
+                <Phone
+                  size={18}
+                  strokeWidth={1.8}
+                  className="shrink-0"
+                />
+
+                <span>Call +91 77808 19304</span>
               </a>
             </div>
 
-            <p className="mt-7 text-xs text-white/40">
-              Standard from $749 · Premium from $1,111
-            </p>
+            {/* Pricing */}
+            <div className="mt-6 flex flex-wrap justify-center gap-x-3 gap-y-2 text-[10px] text-white/55 min-[390px]:text-xs">
+              <span>$749 · 3-Star Standard</span>
+
+              <span>•</span>
+
+              <span>$1,111 · Premium</span>
+            </div>
           </div>
         </div>
       </div>

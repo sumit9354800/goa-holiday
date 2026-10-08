@@ -1,25 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5f3ed;
-  --foreground: #1d2a20;
-  --primary: #304936;
-  --primary-dark: #24372a;
-  --secondary: #dfe5d8;
-  --accent: #c8a96b;
-  --muted: #6f776f;
-  --white: #ffffff;
-  --border: #d9ddd5;
+  --champagne: #c9a66b;
+  --champagne-dark: #a9844d;
+  --champagne-soft: #eadfc9;
+
+  --whatsapp: #25d366;
+  --whatsapp-dark: #128c7e;
+  --whatsapp-deep: #075e54;
+  --whatsapp-soft: #dcf8c6;
+
+  --call-bg: #f8f1e4;
+  --call-text: #6f5935;
 }
 
 * {
   box-sizing: border-box;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 body {
   margin: 0;
   background: var(--background);
@@ -27,17 +27,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
-
 button,
 a {
   -webkit-tap-highlight-color: transparent;
 }
-
 img {
   max-width: 100%;
 }
-
 ::selection {
-  background: var(--primary);
-  color: var(--white);
+  background: var(--champagne);
+  color: var(--dark);
 }

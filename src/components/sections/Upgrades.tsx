@@ -1,182 +1,160 @@
 import {
   ArrowUpRight,
-  Check,
-  ChefHat,
-  Gift,
   Heart,
+  MessageCircle,
   Sparkles,
+  Utensils,
 } from "lucide-react";
 
 const whatsappUrl =
   "https://api.whatsapp.com/send/?phone=917780819304&text=Hi+India+Travel+Safari%2C+I+would+like+the+price+and+full+quote+for+Goa+%E2%80%94+Tropical+Paradise.&type=phone_number&app_absent=0";
 
-const upgradeFeatures = [
-  "Lunch included during your stay",
-  "Dinner included during your stay",
-  "Convenient dining throughout the trip",
-  "Exclusive package pricing",
-];
-
 const addOns = [
-  {
-    icon: Heart,
-    title: "Romantic Experiences",
-    description:
-      "Create memorable moments with customized romantic experiences and special arrangements.",
-  },
-  {
-    icon: Sparkles,
-    title: "Premium Activities",
-    description:
-      "Add exclusive activities and experiences tailored around your travel preferences.",
-  },
-  {
-    icon: Gift,
-    title: "Special Arrangements",
-    description:
-      "Celebrate birthdays, anniversaries or special occasions with customized arrangements.",
-  },
-];
+  [
+    Heart,
+    "Romantic Experiences",
+    "Private surprises, intimate dining and celebration arrangements.",
+  ],
+  [
+    Sparkles,
+    "Premium Activities",
+    "Add extra experiences to make the trip more personal.",
+  ],
+  [
+    Utensils,
+    "Special Arrangements",
+    "Tell us what you need and we can create a customized quote.",
+  ],
+] as const;
 
 export default function Upgrades() {
   return (
-    <section className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
-      <div className="mx-auto w-full max-w-7xl">
-        {/* Optional Upgrade */}
-        <div className="overflow-hidden rounded-[2rem] bg-[#304936] text-white">
-          <div className="grid lg:grid-cols-[1fr_0.8fr]">
-            <div className="p-6 sm:p-9 lg:p-12">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-[#E7D4A5]">
-                <ChefHat size={22} strokeWidth={1.8} />
+    <section className="bg-[#F7F4EC] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+      <div className="mx-auto max-w-7xl">
+        {/* =====================================================
+            OPTIONAL UPGRADE
+        ====================================================== */}
+
+        <div className="grid overflow-hidden rounded-[2.5rem] border border-[#EADFC9] bg-white lg:grid-cols-2">
+          {/* Left Content */}
+          <div className="p-6 sm:p-10 lg:p-14">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#A9844D] sm:text-base">
+              Optional Upgrade
+            </p>
+
+            <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.045em] text-[#20231D] sm:text-4xl lg:text-5xl">
+              Add lunch & dinner to your stay.
+            </h2>
+
+            <p className="mt-5 max-w-xl text-sm leading-7 text-[#73736B]">
+              Lunch and dinner can also be included with your hotel stay at an
+              exclusive package price. Ask us for the upgrade when requesting
+              your quote.
+            </p>
+
+            {/* Champagne CTA — NOT WhatsApp Green */}
+            <a
+              href={whatsappUrl}
+              data-track="goa-whatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 flex min-h-[51px] w-full items-center justify-center gap-2 rounded-[18px] border-2 border-[#A9844D] bg-[#C9A66B] px-5 py-3 text-center text-[11px] font-bold uppercase tracking-[0.12em] text-[#20231D] shadow-[0_5px_12px_rgba(169,132,77,0.16)] transition-all duration-200 hover:bg-[#A9844D] sm:w-fit sm:px-6 sm:text-[12px] sm:tracking-[0.15em]"
+            >
+              <MessageCircle size={18} strokeWidth={1.8} />
+
+              <span>Ask for Upgrade Price</span>
+            </a>
+          </div>
+
+          {/* Right Image */}
+          <div className="relative min-h-[300px] overflow-hidden bg-[#20231D] sm:min-h-[320px] lg:min-h-full">
+            <img
+              src="/images/hero-goa.webp"
+              alt="Goa tropical evening"
+              className="absolute inset-0 h-full w-full object-cover object-bottom"
+            />
+
+            <div className="absolute inset-0 bg-[#20231D]/45" />
+
+            <div className="absolute inset-4 rounded-[1.75rem] border border-white/15 sm:inset-7">
+              <div className="absolute left-5 top-5 sm:left-6 sm:top-6">
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/60">
+                  Dining
+                </p>
+
+                <p className="mt-2 max-w-[220px] text-xl font-semibold text-white sm:max-w-xs sm:text-3xl">
+                  More moments.
+                  <span className="block italic text-[#E8D6B2]">
+                    More memories.
+                  </span>
+                </p>
               </div>
 
-              <p className="mt-7 text-xs font-semibold uppercase tracking-[0.25em] text-white/50">
-                Optional Upgrade
-              </p>
+              <div className="absolute bottom-5 left-5 right-5 flex flex-col items-start gap-3 sm:bottom-6 sm:left-6 sm:right-6 sm:flex-row sm:items-center sm:justify-between">
+                <span className="rounded-[18px] border-2 border-[#A9844D] bg-[#C9A66B] px-3 py-2 text-[9px] font-bold uppercase tracking-[0.1em] text-[#20231D] sm:text-[10px] sm:tracking-[0.12em]">
+                  Lunch + Dinner
+                </span>
 
-              <h2 className="mt-3 max-w-xl text-3xl font-semibold tracking-[-0.035em] sm:text-4xl lg:text-5xl">
-                Make your stay even more complete.
-              </h2>
-
-              <p className="mt-5 max-w-xl text-sm leading-7 text-white/65 sm:text-base">
-                Want a more convenient dining experience? Lunch and dinner
-                can also be included with your hotel stay at an exclusive
-                package price.
-              </p>
-
-              <div className="mt-7 grid gap-3 sm:grid-cols-2">
-                {upgradeFeatures.map((feature) => (
-                  <div
-                    key={feature}
-                    className="flex items-start gap-3 rounded-2xl bg-white/5 p-4"
-                  >
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#E7D4A5]">
-                      <Check size={11} strokeWidth={2.5} />
-                    </span>
-
-                    <span className="text-sm leading-5 text-white/75">
-                      {feature}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-[#304936] transition-all hover:bg-[#E7D4A5]"
-              >
-                Ask for Upgrade Price
-                <ArrowUpRight size={16} />
-              </a>
-            </div>
-
-            <div className="relative min-h-[280px] overflow-hidden bg-[#24372A] lg:min-h-full">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_25%,rgba(231,212,165,0.22),transparent_32%),radial-gradient(circle_at_80%_75%,rgba(223,229,216,0.14),transparent_35%)]" />
-
-              <div className="absolute inset-8 rounded-[1.5rem] border border-white/10">
-                <div className="absolute left-6 top-6">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/40">
-                    Dining
-                  </p>
-
-                  <p className="mt-2 max-w-xs text-2xl font-semibold text-white sm:text-3xl">
-                    More moments.
-                    <span className="block italic text-[#E7D4A5]">
-                      More memories.
-                    </span>
-                  </p>
-                </div>
-
-                <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
-                  <span className="rounded-full bg-white/10 px-3 py-1.5 text-xs text-white/60">
-                    Lunch + Dinner
-                  </span>
-
-                  <span className="text-xs text-white/40">
-                    Upgrade available
-                  </span>
-                </div>
+                <span className="text-[11px] text-white/65 sm:text-xs">
+                  Upgrade available
+                </span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Exclusive Add-ons */}
-        <div className="mt-20 sm:mt-24">
-          <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#6F776F]">
-              Exclusive Add-ons
-            </p>
+        {/* =====================================================
+            EXCLUSIVE ADD-ONS
+        ====================================================== */}
 
-            <h2 className="mt-4 text-3xl font-semibold tracking-[-0.035em] text-[#24372A] sm:text-4xl lg:text-5xl">
-              Make your Goa experience uniquely yours.
-            </h2>
+        <div className="mt-16 sm:mt-20">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#A9844D] sm:text-base">
+            Exclusive Add-ons
+          </p>
 
-            <p className="mt-5 text-sm leading-6 text-[#6F776F] sm:text-base sm:leading-7">
-              Need something extra? We can arrange premium activities,
-              special experiences and customized services according to your
-              requirements.
-            </p>
-          </div>
+          <h2 className="mt-4 max-w-2xl text-3xl font-semibold leading-[1.05] tracking-[-0.045em] text-[#20231D] sm:text-4xl lg:text-5xl">
+            Make your Goa experience uniquely yours.
+          </h2>
 
-          <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
-            {addOns.map((item) => {
-              const Icon = item.icon;
+          <p className="mt-5 max-w-2xl text-sm leading-7 text-[#73736B]">
+            If you require additional experiences, premium activities or
+            special arrangements, we can offer exclusive customized prices.
+          </p>
 
-              return (
-                <article
-                  key={item.title}
-                  className="group rounded-[1.75rem] border border-[#D9DDD5] bg-[#F5F3ED] p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-lg sm:p-7"
+          <div className="mt-8 grid gap-4 sm:mt-10 md:grid-cols-3">
+            {addOns.map(([Icon, title, description]) => (
+              <article
+                key={title}
+                className="rounded-[1.75rem] border border-[#EADFC9] bg-white p-5 transition-all duration-200 hover:-translate-y-1 hover:border-[#C9A66B] hover:shadow-[0_15px_40px_rgba(32,35,29,0.07)] sm:p-6"
+              >
+                {/* Icon */}
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#EADFC9] text-[#80653C]">
+                  <Icon size={21} strokeWidth={1.8} />
+                </div>
+
+                {/* Content */}
+                <h3 className="mt-5 text-lg font-semibold text-[#20231D] sm:mt-6">
+                  {title}
+                </h3>
+
+                <p className="mt-3 text-sm leading-6 text-[#73736B]">
+                  {description}
+                </p>
+
+                {/* Champagne Secondary Button */}
+                <a
+                  href={whatsappUrl}
+                  data-track="goa-whatsapp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 flex min-h-[45px] w-full items-center justify-center gap-2 rounded-[18px] border-2 border-[#C9A66B] bg-[#F8F1E4] px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.1em] text-[#6F5935] transition-all duration-200 hover:bg-[#EADFC9] sm:w-fit sm:tracking-[0.12em]"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-[#304936] transition-colors group-hover:bg-[#304936] group-hover:text-white">
-                    <Icon size={21} strokeWidth={1.8} />
-                  </div>
+                  <MessageCircle size={16} strokeWidth={1.8} />
 
-                  <h3 className="mt-6 text-lg font-semibold text-[#24372A]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm leading-6 text-[#6F776F]">
-                    {item.description}
-                  </p>
-
-                  <a
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#304936] transition-colors hover:text-[#24372A]"
-                  >
-                    Ask for details
-                    <ArrowUpRight
-                      size={15}
-                      className="transition-transform group-hover:translate-x-0.5"
-                    />
-                  </a>
-                </article>
-              );
-            })}
+                  <span>Ask for Details</span>
+                </a>
+              </article>
+            ))}
           </div>
         </div>
       </div>

@@ -14,67 +14,31 @@ import {
 } from "lucide-react";
 
 const inclusions = [
-  {
-    icon: Hotel,
-    title: "5 Nights Accommodation",
-    description: "4-star hotel stay with private swimming pool.",
-  },
-  {
-    icon: Coffee,
-    title: "Daily Breakfast",
-    description: "Breakfast included throughout your stay.",
-  },
-  {
-    icon: Car,
-    title: "Private Airport Transfers",
-    description: "Private pickup and drop-off from Goa Airport.",
-  },
-  {
-    icon: Map,
-    title: "Private Sightseeing Taxi",
-    description: "Private transportation for sightseeing and transfers.",
-  },
-  {
-    icon: MapPin,
-    title: "North & South Goa",
-    description: "Explore the best attractions across Goa.",
-  },
-  {
-    icon: Sparkles,
-    title: "Birla Temple Visit",
-    description: "Visit the temple and enjoy panoramic surroundings.",
-  },
-  {
-    icon: Waves,
-    title: "Dudhsagar Excursion",
-    description: "Full-day excursion to the spectacular waterfall.",
-  },
-  {
-    icon: PartyPopper,
-    title: "Water Sports",
-    description: "Enjoy an exciting range of water adventure activities.",
-  },
-  {
-    icon: Ship,
-    title: "Sunset Cruise",
-    description: "Goa sunset cruise with dinner.",
-  },
-  {
-    icon: Sparkles,
-    title: "Candlelight Dinner",
-    description: "Private romantic candlelight dinner experience.",
-  },
-  {
-    icon: Ticket,
-    title: "Cultural Experience",
-    description: "Aesthetic cultural dance performance.",
-  },
-  {
-    icon: BadgeCheck,
-    title: "Trip Assistance",
-    description: "Assistance throughout your Goa holiday.",
-  },
-];
+  [
+    Hotel,
+    "5 Nights Accommodation",
+    "4-star hotel with private swimming pool on the Premium package.",
+  ],
+  [Coffee, "Daily Breakfast", "Breakfast included throughout your stay."],
+  [
+    Car,
+    "Private Airport Transfers",
+    "Private pickup and drop-off from Goa Airport.",
+  ],
+  [
+    Map,
+    "Private Taxi",
+    "Private transportation for sightseeing and transfers.",
+  ],
+  [MapPin, "North & South Goa", "Explore the best attractions across Goa."],
+  [Sparkles, "Birla Temple", "Visit and enjoy panoramic surroundings."],
+  [Waves, "Dudhsagar", "Full-day waterfall excursion."],
+  [PartyPopper, "Water Sports", "Scuba diving, jet ski, speed boat and more."],
+  [Ship, "Sunset Cruise", "Goa sunset cruise with dinner."],
+  [Sparkles, "Candlelight Dinner", "Private romantic dinner experience."],
+  [Ticket, "Cultural Dance", "Aesthetic cultural evening."],
+  [BadgeCheck, "Trip Assistance", "Assistance throughout the holiday."],
+] as const;
 
 const exclusions = [
   "Casino entry fees and expenses",
@@ -87,103 +51,107 @@ export default function Inclusions() {
   return (
     <section
       id="inclusions"
-      className="bg-[#F5F3ED] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28"
+      className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28"
     >
-      <div className="mx-auto w-full max-w-7xl">
-        {/* Heading */}
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#6F776F]">
+      <div className="mx-auto max-w-7xl">
+        {/* HEADER */}
+        <div className="max-w-2xl">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#A9844D] sm:text-base">
             Package Details
           </p>
 
-          <h2 className="mt-4 text-3xl font-semibold tracking-[-0.035em] text-[#24372A] sm:text-4xl lg:text-5xl">
-            Everything is taken care of.
+          <h2 className="mt-4 text-3xl font-semibold leading-[1.05] tracking-[-0.045em] text-[#20231D] sm:text-4xl lg:text-5xl">
+            Everything included. Nothing confusing.
           </h2>
 
-          <p className="mt-5 text-sm leading-6 text-[#6F776F] sm:text-base sm:leading-7">
-            From accommodation and transportation to sightseeing and
-            experiences, your Goa holiday comes with a carefully selected
-            collection of inclusions.
+          <p className="mt-5 text-sm leading-7 text-[#73736B]">
+            A clear breakdown of what is covered in your Goa holiday, plus the
+            few things that remain outside the package.
           </p>
         </div>
 
-        {/* Included */}
-        <div className="mt-12 rounded-[2rem] bg-white p-5 shadow-sm sm:p-8 lg:p-10">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6F776F]">
-                Included
-              </p>
-
-              <h3 className="mt-2 text-2xl font-semibold text-[#24372A] sm:text-3xl">
-                Your package includes
-              </h3>
-            </div>
-
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#DFE5D8] text-[#304936]">
-              <BadgeCheck size={21} />
-            </div>
-          </div>
-
-          <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {inclusions.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="group rounded-2xl border border-[#D9DDD5] bg-[#F5F3ED] p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#304936]/20 hover:shadow-md"
-                >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-[#304936] transition-colors group-hover:bg-[#304936] group-hover:text-white">
-                    <Icon size={18} strokeWidth={1.8} />
-                  </div>
-
-                  <h4 className="mt-4 text-sm font-semibold text-[#24372A]">
-                    {item.title}
-                  </h4>
-
-                  <p className="mt-2 text-xs leading-5 text-[#6F776F]">
-                    {item.description}
-                  </p>
+        {/* INCLUSIONS GRID */}
+        <div className="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-2 lg:grid-cols-3">
+          {inclusions.map(([Icon, title, desc]) => (
+            <article
+              key={title}
+              className="rounded-[1.5rem] border border-[#EADFC9] bg-[#F7F4EC] p-4 transition-all duration-300 hover:border-[#C9A66B] hover:bg-white hover:shadow-[0_12px_35px_rgba(32,35,29,0.06)] min-[390px]:p-5"
+            >
+              <div className="flex items-start gap-3">
+                {/* ICON */}
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EADFC9] text-[#80653C]">
+                  <Icon size={18} strokeWidth={1.8} />
                 </div>
-              );
-            })}
-          </div>
+
+                {/* TITLE */}
+                <h3 className="min-w-0 pt-1 text-[13px] font-bold leading-5 text-[#20231D] min-[390px]:text-sm">
+                  {title}
+                </h3>
+              </div>
+
+              <p className="mt-3 text-[13px] leading-6 text-[#73736B] min-[390px]:text-sm">
+                {desc}
+              </p>
+            </article>
+          ))}
         </div>
 
-        {/* Exclusions */}
-        <div className="mt-6 rounded-[2rem] border border-[#D9DDD5] bg-[#E8E9E2] p-5 sm:p-8 lg:p-10">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6F776F]">
-                Exclusions
-              </p>
+        {/* INCLUDED + EXCLUSIONS */}
+        <div className="mt-8 grid gap-5 sm:mt-10 lg:grid-cols-2">
+          {/* INCLUDED */}
+          <div className="rounded-[2rem] bg-[#20231D] p-6 text-white sm:p-8">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#C9A66B]">
+              Included
+            </p>
 
-              <h3 className="mt-2 text-2xl font-semibold text-[#24372A] sm:text-3xl">
-                Not included
-              </h3>
-            </div>
+            <h3 className="mt-3 text-xl font-semibold leading-tight sm:text-2xl">
+              Your trip, thoughtfully covered.
+            </h3>
 
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-[#6F776F]">
-              <X size={20} />
-            </div>
+            <p className="mt-3 text-sm leading-6 text-white/70">
+              Accommodation, transfers, sightseeing, adventure and signature
+              dining experiences are planned into the package.
+            </p>
+
+            {/* SMALL CHAMPAGNE LINE */}
+            <div className="mt-6 h-px w-16 bg-[#C9A66B]" />
           </div>
 
-          <div className="mt-7 grid gap-3 sm:grid-cols-2">
-            {exclusions.map((item) => (
-              <div
-                key={item}
-                className="flex items-start gap-3 rounded-2xl bg-white/70 p-4"
-              >
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#E5E5DF] text-[#6F776F]">
-                  <X size={11} strokeWidth={2.5} />
-                </span>
-
-                <span className="text-sm leading-6 text-[#59635B]">
-                  {item}
-                </span>
+          {/* EXCLUSIONS */}
+          <div className="rounded-[2rem] border border-[#EADFC9] bg-[#F7F4EC] p-6 sm:p-8">
+            <div className="flex items-start gap-3">
+              {/* ICON */}
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[#A9844D]">
+                <X size={18} strokeWidth={1.8} />
               </div>
-            ))}
+
+              <div className="min-w-0">
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#A9844D]">
+                  Exclusions
+                </p>
+
+                <h3 className="mt-1 text-xl font-semibold leading-tight text-[#20231D] sm:text-2xl">
+                  Not included
+                </h3>
+              </div>
+            </div>
+
+            <ul className="mt-6 space-y-3">
+              {exclusions.map((item) => (
+                <li
+                  key={item}
+                  className="flex gap-3 text-[13px] leading-6 text-[#68675F] sm:text-sm"
+                >
+                  <X
+                    size={15}
+                    strokeWidth={1.8}
+                    className="mt-1 shrink-0 text-[#A9844D]"
+                  />
+
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

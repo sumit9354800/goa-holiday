@@ -10,105 +10,95 @@ import {
 } from "lucide-react";
 
 const highlights = [
-  {
-    icon: Building2,
-    title: "4-Star Stay",
-    description:
-      "Comfortable accommodation designed for a relaxed Goa escape.",
-  },
-  {
-    icon: Car,
-    title: "Private Transfers",
-    description:
-      "Private airport pickup, drop-off and sightseeing transportation.",
-  },
-  {
-    icon: Compass,
-    title: "North & South Goa",
-    description:
-      "Explore Goa's iconic beaches, landmarks and coastal locations.",
-  },
-  {
-    icon: Waves,
-    title: "Water Adventures",
-    description:
-      "Scuba diving, jet ski, speed boat and more.",
-  },
-  {
-    icon: Ship,
-    title: "Sunset Cruise",
-    description:
-      "Enjoy a beautiful Goa sunset cruise with dinner.",
-  },
-  {
-    icon: Utensils,
-    title: "Private Dining",
-    description:
-      "A romantic private candlelight dinner experience.",
-  },
-  {
-    icon: Sparkles,
-    title: "Cultural Evening",
-    description:
-      "Experience a vibrant cultural dance performance.",
-  },
-  {
-    icon: Coffee,
-    title: "Daily Breakfast",
-    description:
-      "Start every morning with breakfast included at your hotel.",
-  },
-];
+  [
+    Building2,
+    "3-Star / 4-Star Stay",
+    "Choose the accommodation level that fits your package.",
+  ],
+  [
+    Car,
+    "Private Transfers",
+    "Airport pickup, drop and private sightseeing taxi.",
+  ],
+  [
+    Compass,
+    "North & South Goa",
+    "Beaches, churches, viewpoints and coastal gems.",
+  ],
+  [
+    Waves,
+    "Water Adventures",
+    "Scuba diving, jet ski, speed boat and more.",
+  ],
+  [
+    Ship,
+    "Sunset Cruise",
+    "Dinner on the water with a beautiful Goa evening.",
+  ],
+  [
+    Utensils,
+    "Private Dining",
+    "A romantic candlelight dinner in a memorable setting.",
+  ],
+  [
+    Sparkles,
+    "Cultural Evening",
+    "Goan traditions through an aesthetic cultural performance.",
+  ],
+  [
+    Coffee,
+    "Daily Breakfast",
+    "Start every day with breakfast included.",
+  ],
+] as const;
 
 export default function Highlights() {
   return (
     <section
       id="highlights"
-      className="overflow-hidden bg-[#F5F3ED] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28"
+      className="bg-white px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-24"
     >
-      <div className="mx-auto w-full max-w-7xl">
-        <div className="grid grid-cols-1 gap-10 md:gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
-          {/* Heading */}
-          <div className="w-full lg:sticky lg:top-32 lg:h-fit">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#6F776F]">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
+          {/* LEFT CONTENT */}
+          <div className="lg:sticky lg:top-28 lg:h-fit">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#A9844D] sm:text-base">
               The Experience
             </p>
 
-            <h2 className="mt-4 max-w-lg text-3xl font-semibold leading-tight tracking-[-0.035em] text-[#24372A] sm:text-4xl lg:text-5xl">
-              Everything you need for an unforgettable Goa escape.
+            <h2 className="mt-4 text-3xl font-semibold leading-[1.05] tracking-[-0.04em] text-[#20231D] sm:text-4xl lg:text-5xl">
+              More than a trip. A collection of Goa moments.
             </h2>
 
-            <p className="mt-5 max-w-md text-sm leading-6 text-[#6F776F] sm:mt-6 sm:text-base sm:leading-7">
-              From comfortable accommodation to adventure, dining and
-              sightseeing, every part of your journey is designed to make
-              your Goa holiday effortless and memorable.
+            <p className="mt-5 max-w-md text-sm leading-7 text-[#73736B] sm:mt-6">
+              We combine the practical details with the experiences people
+              remember: beaches, adventure, dining, sunsets and effortless
+              private transfers.
             </p>
+
+            <div className="mt-7 h-px w-20 bg-[#C9A66B] sm:mt-8" />
           </div>
 
-          {/* Cards */}
-          <div className="grid w-full min-w-0 grid-cols-1 gap-4 sm:grid-cols-2">
-            {highlights.map((item) => {
-              const Icon = item.icon;
+          {/* HIGHLIGHT CARDS */}
+          <div className="grid gap-4 sm:grid-cols-2">
+            {highlights.map(([Icon, title, description]) => (
+              <article
+                key={title}
+                className="group rounded-[1.75rem] border border-[#DDD7C9] bg-[#F7F4EC] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#C9A66B] hover:bg-white hover:shadow-[0_18px_50px_rgba(32,35,29,0.08)] sm:p-6"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#EADFC9] text-[#80653C] transition-colors duration-300 group-hover:bg-[#C9A66B] group-hover:text-[#20231D]">
+                  <Icon size={21} strokeWidth={1.7} />
+                </div>
 
-              return (
-                <article
-                  key={item.title}
-                  className="group flex min-w-0 w-full flex-col rounded-[1.5rem] border border-[#D9DDD5] bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#304936]/20 hover:shadow-lg sm:rounded-[1.75rem] sm:p-6"
-                >
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#DFE5D8] text-[#304936] transition-colors duration-300 group-hover:bg-[#304936] group-hover:text-white sm:h-12 sm:w-12">
-                    <Icon size={20} strokeWidth={1.8} />
-                  </div>
+                <h3 className="mt-5 text-base font-semibold text-[#20231D] sm:mt-6 sm:text-lg">
+                  {title}
+                </h3>
 
-                  <h3 className="mt-5 break-words text-base font-semibold text-[#24372A] sm:mt-6 sm:text-lg">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-2 break-words text-sm leading-6 text-[#6F776F]">
-                    {item.description}
-                  </p>
-                </article>
-              );
-            })}
+                <p className="mt-2 text-sm leading-6 text-[#73736B]">
+                  {description}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </div>
