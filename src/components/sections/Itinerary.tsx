@@ -29,7 +29,7 @@ const days = [
     icon: Car,
 
     image:
-      "/itinerary/01.avif",
+      "/itinerary/hotel.jpeg",
 
     position: "center",
 

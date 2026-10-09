@@ -5,10 +5,12 @@ import Image from "next/image";
 import { Phone, MessageCircle, Menu, X } from "lucide-react";
 import { useState } from "react";
 
+
 const navItems = [
   { label: "Home", href: "#home" },
   { label: "Itinerary", href: "#itinerary" },
   { label: "Inclusions", href: "#inclusions" },
+  { label: "Testimonials", href: "#testimonials" },
   { label: "FAQ", href: "#faq" },
 ];
 

@@ -10,10 +10,12 @@ import {
 const whatsappUrl =
   "https://api.whatsapp.com/send/?phone=917780819304&text=Hi+India+Travel+Safari%2C+I+would+like+the+price+and+full+quote+for+Goa+%E2%80%94+Tropical+Paradise.&type=phone_number&app_absent=0";
 
+
 const footerLinks = [
   { label: "Home", href: "#home" },
   { label: "Itinerary", href: "#itinerary" },
   { label: "Inclusions", href: "#inclusions" },
+  { label: "Testimonials", href: "#testimonials" },
   { label: "FAQ", href: "#faq" },
   {
     label: "Privacy Policy",
@@ -28,6 +30,7 @@ const footerLinks = [
     href: "https://indiatravelsafari.com/cancellation-refund-policy",
   },
 ];
+
 
 export default function Footer() {
   return (

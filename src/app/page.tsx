@@ -8,6 +8,7 @@ import Upgrades from "@/components/sections/Upgrades";
 import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/layout/Footer";
+import Testimonials from "@/components/sections/Testimonials";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Itinerary />
       <Inclusions />
       <Upgrades />
+      <Testimonials />
       <FAQ />
       <FinalCTA />
       <Footer />
