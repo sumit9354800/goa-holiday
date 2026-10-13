@@ -1,14 +1,76 @@
+
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 import WhatsAppConversionTracker from "@/components/analytics/WhatsAppConversionTracker";
 
 export const metadata: Metadata = {
-  title: "India Travel Safari | Premium Goa Holiday",
+  title: "Goa Holiday Packages | 5 Nights & 6 Days | India Travel Safari",
+
   description:
-    "Experience a premium 5 nights and 6 days Goa holiday with India Travel Safari.",
+    "Explore Goa with India Travel Safari's 5 nights and 6 days holiday packages. Choose Standard or Premium stays, Goa sightseeing, water sports, sunset dinner cruise and private transfers.",
+
+  keywords: [
+    "Goa holiday packages",
+    "Goa tour packages",
+    "Goa travel packages",
+    "5 nights 6 days Goa package",
+    "6 days Goa tour package",
+    "premium Goa holiday package",
+    "Goa honeymoon package",
+    "Goa family holiday package",
+    "North Goa sightseeing",
+    "South Goa sightseeing",
+    "Dudhsagar waterfall tour",
+    "Goa water sports package",
+    "Goa sunset dinner cruise",
+    "Goa hotel packages",
+    "3 star hotel Goa package",
+    "4 star hotel Goa package",
+    "Goa airport transfers",
+    "India Travel Safari",
+  ],
+
+  applicationName: "India Travel Safari",
+
+  category: "travel",
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
   icons: {
     icon: "/icons/favicon.png",
+  },
+
+  openGraph: {
+    title: "Goa Holiday Packages | India Travel Safari",
+    description:
+      "Discover Goa with a 5 nights and 6 days holiday featuring premium stays, sightseeing, water sports and unforgettable sunset experiences.",
+    type: "website",
+    siteName: "India Travel Safari",
+    images: [
+      {
+        url: "/images/hero-goa.webp",
+        alt: "Goa holiday experience with India Travel Safari",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Goa Holiday Packages | India Travel Safari",
+    description:
+      "Plan your 5 nights and 6 days Goa holiday with Standard and Premium package options.",
+    images: ["/images/hero-goa.webp"],
   },
 };
 
@@ -42,7 +104,6 @@ export default function RootLayout({
             f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-PK2P6G8X');
         `}</Script>
-
         {/* End Google Tag Manager */}
 
         {/* Google Tag Manager noscript */}
@@ -57,10 +118,9 @@ export default function RootLayout({
             }}
           />
         </noscript>
-
         {/* End Google Tag Manager noscript */}
 
-        {/* Google Ads WhatsApp Conversion Tracker */}
+        {/* WhatsApp Conversion Tracker */}
         <WhatsAppConversionTracker />
 
         {children}
